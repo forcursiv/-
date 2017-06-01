@@ -1,0 +1,133 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: 0.5s ease-in-out;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  outline: none;
+}
+img {
+  display: block;
+  width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Arial', sans-serif;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  background-color: #e8e9e9;
+}
+body > header {
+  background: #dddddd;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 20px;
+  border: 2px solid #dedede;
+  text-align: center;
+}
+.form {
+  padding: 20px 1% 20px 2%;
+  max-width: 250px;
+  float: left;
+}
+.form .title {
+  text-align: left;
+  font-size: 16px;
+  padding: 5px 0;
+}
+.form input {
+  margin-bottom: 5px;
+  width: 180px;
+  height: 25px;
+  padding: 0 5px;
+  border-radius: 5px;
+  border: 0;
+}
+.form input[type="submit"] {
+  margin-top: 15px;
+  font-weight: bold;
+  height: 30px;
+  background: #dedede;
+  outline: none;
+}
+.form input[type="submit"]:hover {
+  background: #a7a7a7;
+}
+#bookList li {
+  min-width: 250px;
+  max-width: 300px;
+  height: 200px;
+  border: 2px solid #dedede;
+  float: left;
+  margin: 3%;
+  padding: 10px;
+  position: relative;
+}
+#bookList li header {
+  height: 150px;
+}
+#bookList li header h1 {
+  margin-bottom: 5px;
+  font-size: 22px;
+}
+#bookList li header p {
+  font-size: 18px;
+}
+#bookList li:hover {
+  background: #dddddd;
+}
+#bookList li:hover .btn {
+  opacity: 1;
+}
+#bookList li.active {
+  background: #dddddd;
+}
+#bookList li.active .btn {
+  opacity: 1;
+}
+#bookList li .btn {
+  position: absolute;
+  bottom: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid #dedede;
+  background-color: #eee;
+  z-index: 10;
+  opacity: 0;
+  background-repeat: no-repeat;
+  background-position: 3px 2px;
+}
+#bookList li .delete {
+  right: 10px;
+  background-image: url('../images/delete.svg');
+}
+#bookList li .delete:hover {
+  background: rgba(255, 0, 0, 0.4) url('../images/delete.svg') no-repeat 3px 2px;
+}
+#bookList li .edit {
+  right: 60px;
+  background-image: url('../images/edit.svg');
+}
+#bookList li .edit:hover {
+  background: rgba(0, 0, 255, 0.3) url('../images/edit.svg') no-repeat 3px 2px;
+}
+#bookList li .act {
+  background: rgba(0, 0, 255, 0.3) url('../images/edit.svg') no-repeat 3px 2px;
+}

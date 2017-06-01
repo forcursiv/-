@@ -1,0 +1,127 @@
+@bord: #dedede;
+@bg: #e8e9e9;
+
+*, *:after, *:before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: .5s ease-in-out;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    outline: none;
+}
+img {
+    display: block;
+    width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arial',sans-serif;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 1;
+    background-color: @bg;
+}
+
+
+body > header{
+    background:#dddddd;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 20px;
+    border: 2px solid @bord;
+    text-align: center;
+}
+.form{
+    padding: 20px 1% 20px 2%;
+    max-width:250px;
+    float: left;
+    .title{
+        text-align: left;
+        font-size: 16px;
+        padding: 5px 0;
+    }
+    input{
+        margin-bottom: 5px;
+        width: 180px;
+        height: 25px;
+        padding: 0 5px;
+        border-radius: 5px;
+        border: 0;
+    }
+    input[type="submit"]{
+        margin-top: 15px;
+        font-weight:bold;
+        height: 30px;
+        background: @bord;
+        outline:none;
+        &:hover{
+            background: #a7a7a7;
+        }
+    }
+}
+
+#bookList li {
+    min-width: 250px;
+    max-width: 300px;
+    height: 200px;
+    border: 2px solid @bord;
+    float: left;
+    margin: 3%;
+    padding: 10px;
+    position: relative;
+    header{
+        height: 150px;
+        h1{
+            margin-bottom: 5px;
+            font-size: 22px;
+        }
+        p{font-size: 18px;}
+    }
+
+    &:hover{
+        background: #dddddd;
+        .btn{opacity:1;}
+    }
+    &.active{
+        background: #dddddd;
+        .btn{opacity:1;}
+    }
+
+    .btn{
+        position: absolute;
+        bottom: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        border: 2px solid @bord;
+        background-color: #eee;
+        z-index: 10;
+        opacity: 0;
+        background-repeat: no-repeat;
+        background-position: 3px 2px;
+    }
+    .delete{
+        right: 10px;
+        background-image: url('../images/delete.svg');
+        
+        &:hover{
+            background: rgba(255,0,0,0.4) url('../images/delete.svg') no-repeat 3px 2px;
+        }
+    }
+    .edit{
+        right: 60px;
+        background-image: url('../images/edit.svg');
+        &:hover{
+            background: rgba(0,0,255,0.3) url('../images/edit.svg') no-repeat 3px 2px;;
+        }
+    }
+    .act{background: rgba(0,0,255,0.3) url('../images/edit.svg') no-repeat 3px 2px;}
+}
