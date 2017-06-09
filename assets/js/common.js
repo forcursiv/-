@@ -171,7 +171,6 @@ $(document).ready(function() {
 
 	//удаление 
 	$('main').on('click','.delete', function(){
-		console.log('editNow',editNow);
 		if(!editNow && confirm('Точно-точно?')){
 			var bId = $(this).parent().parent().attr('bookId');
 			//console.log('удаление по ключу',bId);
@@ -181,7 +180,9 @@ $(document).ready(function() {
 			//если удалили книгу, которая редактировалась
 			$('#send input:not(input:submit)').val('');
 			editNow = false;
-		}else if (editNow){alert('Закончите редактирование!');}
+		}else if (editNow){
+			alert('Закончите редактирование!');
+		}
 	});
 
 	//редактирование 
