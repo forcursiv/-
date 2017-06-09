@@ -10,30 +10,43 @@
 	<script type="text/javascript" src="assets/js/common.js"></script>
 </head>
 <body>
-	<header>Электронная библиотека</header>
-	<main>
-		<div class="form">
-			<form id="send">
-				<div class="title">Название</div>
-				<input type="text" name="title" autocomplete="off">
+	<header class="header">Электронная библиотека</header>
+	<main class="main columns">
+		<section class="column">
+			<div class="form">
+				<form id="send">
+					<label for="title">
+						<div>Название</div>
+						<input id="title" type="text" name="title" autocomplete="off">
+					</label>
+					<label for="author">
+						<div>Автор</div>
+						<input id="author" type="text" name="author" autocomplete="off">
+					</label>
+					<label for="year">
+						<div>Год издания</div>
+						<input id="year" type="text" name="year" autocomplete="off">
+					</label>
+					<label for="pages">
+						<div>Кол-во страниц</div>
+						<input id="pages" type="text" name="pages" autocomplete="off">
+					</label>
+					
+					<input type="submit" name="add" value="Сохранить">
+				</form>
+			</div>
+		</section>
+		<section class="column main-column">
 
-				<div class="title">Автор</div>
-				<input type="text" name="author" autocomplete="off">
-
-				<div class="title">Год издания</div>
-				<input type="text" name="year" autocomplete="off">
-
-				<div class="title">Кол-во страниц</div>
-				<input type="number" name="pages"><br>
-				
-				<input type="submit" name="add" value="Сохранить">
-			</form>
-		</div>
-		<div class="list">
-			<ul id="bookList">
-			</ul>
-		</div>
+		</section>
+		<!-- <div class="article-body">
+			<h2>Название книги</h2>
+			<p>Автор книги</p>
+			<footer>
+				<div class="btn delete"></div>
+				<div class="btn edit"></div>
+			</footer>
+		</div>-->
 	</main>
-
 </body>
 </html>
