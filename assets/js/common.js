@@ -29,8 +29,9 @@ $(document).ready(function() {
 			el.prev().addClass('errRegExp');
 			el.css('border-color', errBorder);
 		}else{									//не, все ок. вернем форму в исходное сост.
-			el.prev().removeClass('errRegExp');
 			el.css('border-color', normBorder);
+			el.prev().removeClass('errMess');
+			el.prev().removeClass('errRegExp');
 		}
 		return err;
 	}
@@ -53,7 +54,7 @@ $(document).ready(function() {
 		error2 = Validate(author);
 		error3 = Validate(year, 1, 4, fourNum);
 		error4 = Validate(pages);
-		//console.log('ошибочки:',error1,error2,error3,error4);
+		console.log('ошибочки:',error1,error2,error3,error4);
         if ((error1 != 0) || (error2 != 0) || (error3 != 0) || (error4 != 0)){
         	valdationErr++;
         	return false;
